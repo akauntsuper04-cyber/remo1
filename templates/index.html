@@ -1,76 +1,59 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <meta charset="UTF-8">
-    <title>rEm01 eSports</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-
-<nav>
-    <div class="logo-nav">rEm01</div>
-    <div class="nav-links">
-        <a href="/">Главная</a>
-        <a href="/matches">Матчи</a>
-        <a href="#rules">Правила</a>
-        <a href="https://t.me/M1wkyyyy" target="_blank">Лидер</a>
-    </div>
-</nav>
+{% extends "base.html" %}
+{% block content %}
 
 <section class="hero">
-    <img src="{{ url_for('static', filename='logo.jpg') }}" class="hero-logo">
-    <h1>rEm01 eSports</h1>
-    <p>Standoff 2 Competitive Clan</p>
-
-    <div class="buttons">
-        <a href="https://t.me/M1wkyyyy" target="_blank" class="btn neon">Telegram Лидера</a>
-        <a href="https://t.me/ВАШ_КЛАН_СЮДА" target="_blank" class="btn">Telegram Клана</a>
+    <div class="hero-content">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" class="hero-logo" alt="rEm01">
+        <h1>rEm01 eSports</h1>
+        <p>Профессиональный клан по Standoff 2</p>
+        <div class="hero-buttons">
+            <a href="/matches" class="btn">Наши матчи</a>
+            <a href="/rules" class="btn-outline">Правила</a>
+        </div>
     </div>
 </section>
 
 <section class="about">
-    <h2>Наша цель</h2>
+    <h2>О нашей команде</h2>
     <p>
-        Клан создан для выхода на про-сцену Standoff 2.
-        Дисциплина, тренировки, ростер и постоянный прогресс.
+        rEm01 — это киберспортивный проект, направленный на выход
+        на профессиональную сцену Standoff 2.
+        Мы строим дисциплину, стратегию и командную игру.
     </p>
 </section>
 
-<section id="rules" class="rules">
-    <h2>Правила команды</h2>
+<section class="goals">
+    <h2>Наши цели</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Про-сцена</h3>
+            <p>Выход на профессиональные турниры.</p>
+        </div>
+        <div class="card">
+            <h3>Ростер</h3>
+            <p>Сильный состав и дисциплина.</p>
+        </div>
+        <div class="card">
+            <h3>Контент</h3>
+            <p>YouTube, TikTok и стримы.</p>
+        </div>
+    </div>
+</section>
 
-    <h3>Голосовой чат</h3>
+<section class="advantages">
+    <h2>Почему именно rEm01?</h2>
     <ul>
-        <li>Все обязаны быть в войсе (Параллель).</li>
-        <li>Метками не спамить.</li>
-        <li>Никакой дизморали во время матча.</li>
-        <li>Ошибки не обсуждаются во время игры.</li>
-        <li>Перед матчем — фулл фокус.</li>
-    </ul>
-
-    <h3>Игровой девайс</h3>
-    <ul>
-        <li>Зарядить устройство заранее.</li>
-        <li>Подготовить наушники.</li>
-        <li>Стабильный интернет обязателен.</li>
-    </ul>
-
-    <h3>Тренировки</h3>
-    <ul>
-        <li>Адекватное поведение.</li>
-        <li>Не перебивать тренера.</li>
-        <li>Во время тактик микрофоны выключены.</li>
-        <li>Тренировки для результата, а не для галочки.</li>
+        <li>Жёсткая дисциплина</li>
+        <li>Регулярные тренировки</li>
+        <li>Фулл фокус на результат</li>
+        <li>Сильный лидер</li>
+        <li>Планы на масштабирование</li>
     </ul>
 </section>
 
-<footer>
-    <p>© 2026 rEm01 eSports</p>
-</footer>
+<section class="contact">
+    <h2>Связь с нами</h2>
+    <a href="https://t.me/M1wkyyyy" target="_blank" class="btn">Telegram лидера</a>
+</section>
 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-</html>
+{% endblock %}

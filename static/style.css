@@ -1,82 +1,231 @@
-body {
+/* =========================
+   GLOBAL
+========================= */
+
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0a0a12;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #a855f7;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background: #111;
     position: fixed;
     width: 100%;
+    top: 0;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo-nav {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #a855f7, #6366f1);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .nav-links a {
-    margin-left: 30px;
-    color: white;
-    text-decoration: none;
-    transition: 0.2s;
+    margin-left: 25px;
+    font-size: 16px;
 }
 
-.nav-links a:hover {
-    color: #b84dff;
-}
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero {
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background: #0a0a12;
+    align-items: center;
     text-align: center;
+    background: radial-gradient(circle at top, #240046, #0f0f0f);
+    padding: 20px;
+}
+
+.hero-content {
+    z-index: 2;
 }
 
 .hero-logo {
-    width: 180px;
+    width: 220px;
+    margin-bottom: 30px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
 }
 
 .hero h1 {
-    font-size: 60px;
-    margin: 20px 0;
+    font-size: 80px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #a855f7, #6366f1);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.buttons {
-    margin-top: 30px;
+.hero p {
+    font-size: 22px;
+    opacity: 0.8;
+    margin-bottom: 30px;
 }
 
-.btn {
-    padding: 12px 30px;
-    margin: 10px;
-    text-decoration: none;
-    color: white;
-    border: 1px solid #b84dff;
-    transition: 0.2s;
+.hero-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: linear-gradient(90deg, #a855f7, #6366f1);
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #b84dff;
+.hero-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #a855f7;
 }
 
-.section, .about, .rules, .matches {
-    padding: 120px 60px;
+/* =========================
+   INFO SECTION
+========================= */
+
+.section {
+    padding: 120px 10%;
+    text-align: center;
 }
 
-.rules ul {
-    list-style: none;
-    padding: 0;
+.section h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #a855f7, #6366f1);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.rules li {
-    padding: 8px 0;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(168,85,247,0.4);
+}
+
+/* =========================
+   MATCHES PAGE
+========================= */
+
+.matches-container {
+    padding: 150px 10%;
+    min-height: 100vh;
 }
 
 .match-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.match-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #6366f1;
+}
+
+/* =========================
+   RULES PAGE
+========================= */
+
+.rules-container {
+    padding: 150px 10%;
+    line-height: 1.8;
+}
+
+.rules-container h1 {
+    margin-bottom: 30px;
+}
+
+.rules-container ul {
+    list-style: none;
+}
+
+.rules-container li {
+    margin-bottom: 15px;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 40px;
     background: #111;
-    padding: 25px;
-    margin: 20px 0;
-    border: 1px solid #222;
+    margin-top: 50px;
+    opacity: 0.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
 }

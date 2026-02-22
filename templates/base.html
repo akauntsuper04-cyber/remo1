@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>rEm01 eSports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">rEm01</div>
+    <div class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/matches">Матчи</a>
+        <a href="/rules">Правила</a>
+        <a href="https://t.me/M1wkyyyy" target="_blank">Лидер</a>
+    </div>
+</nav>
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
