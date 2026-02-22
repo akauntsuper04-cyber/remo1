@@ -9,17 +9,16 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 60px;
-    background: rgba(0,0,0,0.7);
+    background: #111;
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(10px);
 }
 
 .nav-links a {
     margin-left: 30px;
     color: white;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .nav-links a:hover {
@@ -32,18 +31,16 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, #1a0033, #000);
+    background: #0a0a12;
     text-align: center;
-    animation: fadeIn 2s ease;
 }
 
 .hero-logo {
-    width: 200px;
-    filter: drop-shadow(0 0 30px #b84dff);
+    width: 180px;
 }
 
 .hero h1 {
-    font-size: 70px;
+    font-size: 60px;
     margin: 20px 0;
 }
 
@@ -57,15 +54,11 @@ nav {
     text-decoration: none;
     color: white;
     border: 1px solid #b84dff;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .btn:hover {
     background: #b84dff;
-}
-
-.neon {
-    box-shadow: 0 0 20px #b84dff;
 }
 
 .section, .about, .rules, .matches {
@@ -78,23 +71,12 @@ nav {
 }
 
 .rules li {
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .match-card {
     background: #111;
-    padding: 30px;
+    padding: 25px;
     margin: 20px 0;
     border: 1px solid #222;
-    transition: 0.3s;
-}
-
-.match-card:hover {
-    border-color: #b84dff;
-    transform: translateY(-5px);
-}
-
-@keyframes fadeIn {
-    from {opacity:0;}
-    to {opacity:1;}
 }
