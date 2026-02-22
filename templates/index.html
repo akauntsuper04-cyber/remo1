@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>rEm01 eSports</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo-nav">rEm01</div>
+    <div class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/matches">Матчи</a>
+        <a href="#rules">Правила</a>
+        <a href="https://t.me/M1wkyyyy" target="_blank">Лидер</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <img src="{{ url_for('static', filename='logo.jpg') }}" class="hero-logo">
+    <h1>rEm01 eSports</h1>
+    <p>Standoff 2 Competitive Clan</p>
+
+    <div class="buttons">
+        <a href="https://t.me/M1wkyyyy" target="_blank" class="btn neon">Telegram Лидера</a>
+        <a href="https://t.me/ВАШ_КЛАН_СЮДА" target="_blank" class="btn">Telegram Клана</a>
+    </div>
+</section>
+
+<section class="about">
+    <h2>Наша цель</h2>
+    <p>
+        Клан создан для выхода на про-сцену Standoff 2.
+        Дисциплина, тренировки, ростер и постоянный прогресс.
+    </p>
+</section>
+
+<section id="rules" class="rules">
+    <h2>Правила команды</h2>
+
+    <h3>Голосовой чат</h3>
+    <ul>
+        <li>Все обязаны быть в войсе (Параллель).</li>
+        <li>Метками не спамить.</li>
+        <li>Никакой дизморали во время матча.</li>
+        <li>Ошибки не обсуждаются во время игры.</li>
+        <li>Перед матчем — фулл фокус.</li>
+    </ul>
+
+    <h3>Игровой девайс</h3>
+    <ul>
+        <li>Зарядить устройство заранее.</li>
+        <li>Подготовить наушники.</li>
+        <li>Стабильный интернет обязателен.</li>
+    </ul>
+
+    <h3>Тренировки</h3>
+    <ul>
+        <li>Адекватное поведение.</li>
+        <li>Не перебивать тренера.</li>
+        <li>Во время тактик микрофоны выключены.</li>
+        <li>Тренировки для результата, а не для галочки.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2026 rEm01 eSports</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
