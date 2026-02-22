@@ -12,4 +12,4 @@ def matches():
     return render_template("matches.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)git --version
+    app.run(debug=True)
