@@ -1,20 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="section">
-    <h1 class="section-title">Сыгранные матчи</h1>
+<section class="matches-page">
+    <div class="container">
 
-    <div class="cards">
+        <h1 class="page-title">Сыгранные матчи</h1>
 
-        <a href="/match1" class="match-card win">
-            <h2>rEm01 vs Eriv</h2>
-            <p>Rust | Победа 13:7</p>
-        </a>
+        <div class="matches-grid">
 
-        <a href="/match2" class="match-card win">
-            <h2>rEm01 vs BLDSH</h2>
-            <p>Province | Победа 13:0</p>
-        </a>
+            <a href="{{ url_for('match1') }}" class="match-card win">
+                <h2>rEm01 vs Eriv</h2>
+                <p>Rust | Россия</p>
+                <span class="score">Победа 13:7</span>
+            </a>
+
+            <a href="{{ url_for('match2') }}" class="match-card win">
+                <h2>rEm01 vs BLDSH</h2>
+                <p>Province | Россия</p>
+                <span class="score">Победа 13:0</span>
+            </a>
+
+        </div>
 
     </div>
 </section>

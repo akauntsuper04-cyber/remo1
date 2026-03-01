@@ -343,3 +343,68 @@ nav {
         width: 300px;
     }
 }
+/* =========================
+   MATCHES PAGE NEW
+========================= */
+
+    .matches-page {
+        padding-top: 140px;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #0f0f0f, #14001f);
+    }
+
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .page-title {
+        font-size: 48px;
+        margin-bottom: 50px;
+        background: linear-gradient(90deg, #b14cff, #7b2cff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .matches-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .match-card {
+        background: #141414;
+        padding: 30px;
+        border-radius: 20px;
+        transition: 0.3s;
+        text-decoration: none;
+        color: white;
+        border: 1px solid rgba(177,76,255,0.2);
+    }
+
+    .match-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 25px rgba(177,76,255,0.4);
+    }
+
+    .match-card h2 {
+        margin-bottom: 10px;
+    }
+
+    .match-card p {
+        color: #aaa;
+        margin-bottom: 15px;
+    }
+
+    .score {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 8px;
+        background: rgba(0,255,136,0.15);
+        color: #00ff88;
+        font-weight: bold;
+    }
+
+    .win {
+        border-left: 4px solid #00ff88;
+    }
