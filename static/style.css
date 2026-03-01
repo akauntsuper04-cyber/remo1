@@ -408,3 +408,63 @@ nav {
     .win {
         border-left: 4px solid #00ff88;
     }
+/* =========================
+   MATCH DETAILS
+========================= */
+
+    .match-details {
+        padding-top: 140px;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #0f0f0f, #14001f);
+    }
+
+    .match-score {
+        margin-bottom: 40px;
+    }
+
+    .win-text {
+        color: #00ff88;
+    }
+
+    .teams-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .team-box {
+        flex: 1;
+        min-width: 350px;
+        background: #141414;
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid rgba(177,76,255,0.2);
+    }
+
+    .team-box h2 {
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th {
+        text-align: left;
+        padding: 10px;
+        background: rgba(177,76,255,0.2);
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #222;
+    }
+
+    tr:hover {
+        background: #1f001f;
+    }
+
+    .mvp {
+        background: rgba(0,255,136,0.15);
+    }
