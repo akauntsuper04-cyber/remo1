@@ -2,58 +2,53 @@
 {% block content %}
 
 <section class="hero">
-    <div class="hero-content">
-        <img src="{{ url_for('static', filename='logo.jpg') }}" class="hero-logo" alt="rEm01">
+
+    <div class="hero-left">
         <h1>rEm01 eSports</h1>
-        <p>Профессиональный клан по Standoff 2</p>
+        <p>
+            Профессиональный киберспортивный состав по Standoff 2.
+            Дисциплина. Стратегия. Результат.
+        </p>
+
         <div class="hero-buttons">
-            <a href="/matches" class="btn">Наши матчи</a>
-            <a href="/rules" class="btn-outline">Правила</a>
+            <a href="/roster" class="btn-primary">Состав</a>
+            <a href="/matches" class="btn-secondary">Матчи</a>
         </div>
     </div>
+
+    <div class="hero-right">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" class="main-logo">
+    </div>
+
 </section>
+
 
 <section class="about">
     <h2>О нашей команде</h2>
     <p>
-        rEm01 — это киберспортивный проект, направленный на выход
-        на профессиональную сцену Standoff 2.
-        Мы строим дисциплину, стратегию и командную игру.
+        rEm01 — это амбициозный eSports-проект, направленный на выход на профессиональную сцену.
+        Мы строим командную дисциплину, развиваем тактическое мышление
+        и нацелены на участие в турнирах.
     </p>
 </section>
 
 <section class="goals">
-    <h2>Наши цели</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Про-сцена</h3>
-            <p>Выход на профессиональные турниры.</p>
-        </div>
-        <div class="card">
-            <h3>Ростер</h3>
-            <p>Сильный состав и дисциплина.</p>
-        </div>
-        <div class="card">
-            <h3>Контент</h3>
-            <p>YouTube, TikTok и стримы.</p>
-        </div>
+
+    <div class="goal-card">
+        <h3>🏆 Про-сцена</h3>
+        <p>Выход на профессиональные турниры.</p>
     </div>
-</section>
 
-<section class="advantages">
-    <h2>Почему именно rEm01?</h2>
-    <ul>
-        <li>Жёсткая дисциплина</li>
-        <li>Регулярные тренировки</li>
-        <li>Фулл фокус на результат</li>
-        <li>Сильный лидер</li>
-        <li>Планы на масштабирование</li>
-    </ul>
-</section>
+    <div class="goal-card">
+        <h3>🎯 Дисциплина</h3>
+        <p>Жёсткая игровая структура и контроль.</p>
+    </div>
 
-<section class="contact">
-    <h2>Связь с нами</h2>
-    <a href="https://t.me/M1wkyyyy" target="_blank" class="btn">Telegram лидера</a>
+    <div class="goal-card">
+        <h3>📈 Рост</h3>
+        <p>Постоянное развитие состава и академии.</p>
+    </div>
+
 </section>
 
 {% endblock %}

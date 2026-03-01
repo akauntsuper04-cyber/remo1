@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 class="page-title">Матчи команды</h1>
+<section class="section">
+    <h1 class="section-title">Сыгранные матчи</h1>
 
-<div class="match-card">
-    <div>rEm01</div>
-    <div>VS</div>
-    <div>Enemy Team</div>
-</div>
+    <div class="cards">
 
-<div class="match-card">
-    <div>rEm01</div>
-    <div>VS</div>
-    <div>Future Opponent</div>
-</div>
+        <a href="/match1" class="match-card win">
+            <h2>rEm01 vs Eriv</h2>
+            <p>Rust | Победа 13:7</p>
+        </a>
+
+        <a href="/match2" class="match-card win">
+            <h2>rEm01 vs BLDSH</h2>
+            <p>Province | Победа 13:0</p>
+        </a>
+
+    </div>
+</section>
 
 {% endblock %}

@@ -1,6 +1,6 @@
-/* =========================
-   GLOBAL
-========================= */
+/* ============================= */
+/* GLOBAL */
+/* ============================= */
 
 * {
     margin: 0;
@@ -9,223 +9,337 @@
 }
 
 body {
+    background: #0b0b0f;
     font-family: 'Segoe UI', sans-serif;
-    background: #0f0f0f;
     color: white;
     overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: white;
-    transition: 0.3s;
+    color: inherit;
 }
 
-a:hover {
-    color: #a855f7;
-}
-
-/* =========================
-   NAVBAR
-========================= */
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
 
 nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 20px 40px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 8%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
 .logo-nav {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    background: linear-gradient(90deg, #a855f7, #6366f1);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #9b4dff;
 }
 
 .nav-links a {
     margin-left: 25px;
-    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+.nav-links a:hover {
+    color: #9b4dff;
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
 
 .hero {
-    height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    background: radial-gradient(circle at top, #240046, #0f0f0f);
-    padding: 20px;
+    padding: 100px 10%;
+    min-height: 90vh;
 }
 
-.hero-content {
-    z-index: 2;
+.hero-left {
+    max-width: 500px;
 }
 
-.hero-logo {
-    width: 220px;
-    margin-bottom: 30px;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
-}
-
-.hero h1 {
-    font-size: 80px;
-    margin-bottom: 15px;
-    background: linear-gradient(90deg, #a855f7, #6366f1);
+.hero-left h1 {
+    font-size: 64px;
+    background: linear-gradient(45deg, #7b2ff7, #f107a3);
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 22px;
+.hero-left p {
+    font-size: 18px;
     opacity: 0.8;
     margin-bottom: 30px;
+    line-height: 1.6;
 }
 
-.hero-btn {
-    display: inline-block;
-    padding: 14px 30px;
-    background: linear-gradient(90deg, #a855f7, #6366f1);
-    border-radius: 30px;
+.hero-buttons a {
+    margin-right: 15px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #7b2ff7, #f107a3);
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
     font-weight: bold;
     transition: 0.3s;
 }
 
-.hero-btn:hover {
+.btn-primary:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #a855f7;
 }
 
-/* =========================
-   INFO SECTION
-========================= */
+.btn-secondary {
+    border: 2px solid #7b2ff7;
+    padding: 10px 23px;
+    border-radius: 8px;
+    color: #7b2ff7;
+    transition: 0.3s;
+}
 
-.section {
-    padding: 120px 10%;
+.btn-secondary:hover {
+    background: #7b2ff7;
+    color: white;
+}
+
+/* LOGO */
+
+.main-logo {
+    width: 420px;
+    filter: drop-shadow(0 0 40px #7b2ff7);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ============================= */
+/* ABOUT */
+/* ============================= */
+
+.about {
     text-align: center;
+    padding: 100px 15%;
 }
 
-.section h2 {
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #9b4dff;
+}
+
+.about p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+/* ============================= */
+/* GOALS */
+/* ============================= */
+
+.goals {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px;
+    flex-wrap: wrap;
+}
+
+.goal-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 15px;
+    width: 260px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.goal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #7b2ff7;
+}
+
+.goal-card h3 {
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/* ROSTER */
+/* ============================= */
+
+.roster-section {
+    padding: 100px 10%;
+}
+
+.roster-title {
+    text-align: center;
     font-size: 40px;
-    margin-bottom: 40px;
-    background: linear-gradient(90deg, #a855f7, #6366f1);
-    -webkit-background-clip: text;
-    color: transparent;
+    margin-bottom: 50px;
+    color: #9b4dff;
 }
 
-.cards {
+.roster-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
-.card {
-    background: #1a1a1a;
+.player-card {
+    background: #111;
     padding: 30px;
-    border-radius: 20px;
-    transition: 0.4s;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(168,85,247,0.4);
+.player-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #7b2ff7;
 }
 
-/* =========================
-   MATCHES PAGE
-========================= */
+.player-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 3px solid #7b2ff7;
+}
 
-.matches-container {
-    padding: 150px 10%;
-    min-height: 100vh;
+.player-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.player-info {
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+/* ============================= */
+/* MATCHES */
+/* ============================= */
+
+.matches-section {
+    padding: 100px 10%;
 }
 
 .match-card {
-    background: #1a1a1a;
-    padding: 20px;
+    background: #111;
+    padding: 30px;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     transition: 0.3s;
 }
 
 .match-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px #6366f1;
+    box-shadow: 0 0 20px #7b2ff7;
 }
 
-/* =========================
-   RULES PAGE
-========================= */
-
-.rules-container {
-    padding: 150px 10%;
-    line-height: 1.8;
+.match-score {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.rules-container h1 {
-    margin-bottom: 30px;
+.win {
+    color: #00ff88;
 }
 
-.rules-container ul {
+.loss {
+    color: #ff4d4d;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.stats-table th {
+    color: #9b4dff;
+}
+
+/* ============================= */
+/* RULES */
+/* ============================= */
+
+.rules-wrapper {
+    padding: 100px 10%;
+}
+
+.rules-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: #9b4dff;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.rule-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.rule-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #7b2ff7;
+}
+
+.rule-card h2 {
+    margin-bottom: 20px;
+    color: #9b4dff;
+}
+
+.rule-card ul {
     list-style: none;
 }
 
-.rules-container li {
-    margin-bottom: 15px;
-    background: #1a1a1a;
-    padding: 15px;
-    border-radius: 10px;
+.rule-card li {
+    margin-bottom: 12px;
+    opacity: 0.85;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
 
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #111;
-    margin-top: 50px;
-    opacity: 0.6;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 50px;
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hero p {
-        font-size: 18px;
-    }
-
-    nav {
-        padding: 15px 20px;
-    }
-
-    .nav-links a {
-        margin-left: 15px;
-        font-size: 14px;
+    .main-logo {
+        margin-top: 40px;
+        width: 300px;
     }
 }

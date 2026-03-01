@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="roster-section">
+
+    <h1 class="section-title">Основной состав</h1>
+
+    <div class="roster-grid">
+
+        <!-- YT M1wky -->
+        <div class="player-card">
+            <img src="{{ url_for('static', filename='team.jpg') }}" class="player-avatar">
+            <h2>YT M1wky</h2>
+            <div class="player-country ru">🇷🇺 Россия</div>
+            <p>ID: 42000357</p>
+            <span class="age">14 лет</span>
+        </div>
+
+        <!-- h1Q -->
+        <div class="player-card">
+            <img src="{{ url_for('static', filename='team.jpg') }}" class="player-avatar">
+            <h2>h1Q</h2>
+            <div class="player-country ru">🇷🇺 Россия</div>
+            <p>ID: 60234045</p>
+            <span class="age">16 лет</span>
+        </div>
+
+        <!-- Weigh -->
+        <div class="player-card">
+            <img src="{{ url_for('static', filename='team.jpg') }}" class="player-avatar">
+            <h2>Weigh</h2>
+            <div class="player-country ru">🇷🇺 Россия</div>
+            <p>ID: 12208379</p>
+            <span class="age">23 года</span>
+        </div>
+
+        <!-- rÂp -->
+        <div class="player-card">
+            <img src="{{ url_for('static', filename='team.jpg') }}" class="player-avatar">
+            <h2>rÂp</h2>
+            <div class="player-country ua">🇺🇦 Украина</div>
+            <p>ID: 206481564</p>
+            <span class="age">17 лет</span>
+        </div>
+
+        <!-- LinZeSS -->
+        <div class="player-card">
+            <img src="{{ url_for('static', filename='team.jpg') }}" class="player-avatar">
+            <h2>LinZeSS</h2>
+            <div class="player-country ru">🇷🇺 Россия</div>
+            <p>ID: 20470982</p>
+            <span class="age">16 лет</span>
+        </div>
+
+    </div>
+
+
+    <h1 class="section-title">Академия</h1>
+
+    <div class="roster-grid">
+
+        <div class="player-card">
+            <img src="{{ url_for('static', filename='team.jpg') }}" class="player-avatar">
+            <h2>Fauos</h2>
+            <div class="player-country ru">🇷🇺 Россия</div>
+            <p>ID: 153124100</p>
+            <span class="age">12 лет</span>
+        </div>
+
+        <div class="player-card">
+            <img src="{{ url_for('static', filename='team.jpg') }}" class="player-avatar">
+            <h2>morn1ng</h2>
+            <div class="player-country ru">🇷🇺 Россия</div>
+            <p>ID: 201609382</p>
+            <span class="age">17 лет</span>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
